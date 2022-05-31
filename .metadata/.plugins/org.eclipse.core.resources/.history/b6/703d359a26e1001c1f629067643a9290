@@ -1,0 +1,46 @@
+package desafioBancoDigital;
+
+public abstract class Conta {
+
+	protected int numeroAgencia;
+	protected int numeroContaCorrente;
+	protected double valorSaldo;
+
+	
+	
+	public int getNumeroAgencia() {
+		return numeroAgencia;
+	}
+
+	public int getNumeroContaCorrente() {
+		return numeroContaCorrente;
+	}
+
+	public double getValorSaldo() {
+		return valorSaldo;
+	}
+
+	public void sacar() {
+		
+	}
+	
+	public void depositar() {
+		
+	}
+	
+	public void transferir() {
+		
+	}
+	
+	private static int SEQUENCIAL = 100000;
+	
+	protected static final int AGENCIA_PADRAO = 1;
+	
+	public Conta() {
+		this.numeroAgencia = Conta.AGENCIA_PADRAO;
+		this.numeroContaCorrente = SEQUENCIAL++;
+	}
+	
+ 
+	
+}

@@ -1,0 +1,31 @@
+package interfaceList;
+
+import java.util.ArrayList;
+
+public class MetodosList {
+
+	public static void main(String[] args) {
+		
+		// instânciando um objeto List
+		
+		//List notas = new ArrayList(); // antes do java 5
+			
+		//List<Double> notas = new ArrayList<>(); //Generics(jdk 5) - Diamond Operator (jdk 7)
+		
+		//ArrayList<Double> notas = new ArrayList<>();
+		
+		//List<Double> notas = new ArrayList<>(Arrays.asList(7d,8.5,9.3,5d,7d,0d,3.6));
+		
+		//List<Double> notas = Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
+	
+		
+		ArrayList<Double> notas = new ArrayList<>();
+		notas.add(9.6);
+		notas.add(2d);
+		notas.add(13.4);
+		
+		System.out.println(notas);
+		
+	}
+	
+}

@@ -1,0 +1,12 @@
+package interfaceMap;
+
+public class ExercicioMap {
+	
+	private String uf;
+	private float pop;
+	
+	public ExercicioMap(String uf, float pop) {
+		this.uf = uf;
+		this.pop = pop;
+	}
+}

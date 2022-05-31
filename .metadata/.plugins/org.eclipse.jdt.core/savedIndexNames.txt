@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\salex\OneDrive\ADS\Bootcamp\GFT_Start_5_Java\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+907603947.index
+2999705820.index

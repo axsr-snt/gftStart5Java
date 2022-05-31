@@ -1,0 +1,16 @@
+package interfaceList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class OrdenarList {	
+
+	public static void main(String[] args) {
+		
+		List<Gato> gatos = new ArrayList<>(){{
+			add(new Gato("Puga", 14, "Sphynx"));
+		}};
+		
+		System.out.println(gatos);
+	}
+}

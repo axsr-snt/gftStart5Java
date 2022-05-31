@@ -1,0 +1,21 @@
+package interfaceList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class OrdenarList {	
+
+	public static void main(String[] args) {
+		
+		Gato gatiu = new Gato(nome, idade, raca);
+		
+		List<Gato> gatos = new ArrayList<>(){{
+			add(new Gato("Bob", 12, "Persia"));
+			add(new Gato("Tyler", 6, "Angora"));
+			add(new Gato("Rick", 8, "Siamês"));
+			add(new Gato("Lili", 9, "Sphynx"));
+			add(new Gato("Pandora", 4, "Ragdoll"));
+			}
+		}
+	}
+}

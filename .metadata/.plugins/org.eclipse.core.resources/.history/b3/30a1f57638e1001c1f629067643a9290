@@ -1,0 +1,25 @@
+package desafioBancoDigital;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Cliente alex = new Cliente();
+		alex.setNomeCliente("Alex");
+		
+		
+		Conta cc = new ContaCorrente(alex);
+		Conta cp = new ContaPoupanca(alex);
+		
+		
+		cc.depositar(1650);
+		cc.transferir(100, cp);
+
+		
+		cc.imprimirExtrato();
+		cp.imprimirExtrato();
+		
+
+		
+	}
+}

@@ -1,0 +1,30 @@
+package interfaceList;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class OrdenarList {	
+
+	public static void main(String[] args) {
+		
+		List<Gato> gatos = new ArrayList<>(){{
+			add(new Gato("Puga", 6, "Sphynx"));
+			add(new Gato("chico", 9, "Siames"));
+			add(new Gato("Bob", 5, "Persa"));
+			add(new Gato("Pandora", 8, "Ragdoll"));
+			add(new Gato("Mimi", 3, "Munchkin"));
+			add(new Gato("Teddy", 14, "Siberiano"));
+		}};
+		System.out.println(gatos);
+		
+		//Ordenação por nome utilizando 
+		gatos.sort(Comparator.comparing(Gato::getNome));
+		System.out.println(gatos);
+		
+		Collections.shuffle(gatos);
+		System.out.println(gatos);
+		
+	}
+}

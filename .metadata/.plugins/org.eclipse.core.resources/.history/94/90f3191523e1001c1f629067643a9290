@@ -1,0 +1,20 @@
+package desafioBancoDigital;
+
+public class ContaCorrente {
+
+	private int numeroAgencia;
+	private int numeroContaCorrente;
+	private double valorSaldo;
+	
+	public void sacar() {
+		
+	}
+	
+	public void depositar() {
+		
+	}
+	
+	public void transferir() {
+		
+	}
+}

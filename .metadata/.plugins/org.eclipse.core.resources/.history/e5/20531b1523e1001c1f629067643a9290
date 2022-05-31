@@ -1,0 +1,6 @@
+package desafioBancoDigital;
+
+public class Banco {
+	
+	String nomeBanco;
+}

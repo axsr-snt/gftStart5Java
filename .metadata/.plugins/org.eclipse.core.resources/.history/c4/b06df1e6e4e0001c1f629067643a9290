@@ -1,0 +1,22 @@
+package streamAPI;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ExemploStream {
+
+	public static void main(String[] args) {
+		Map<String, Integer> populacao = new HashMap<>();
+		populacao.put("PE", 9616621);
+		populacao.put("AL", 3351543);
+		populacao.put("CE", 9187103);
+		populacao.put("RN", 3534265);
+	
+	System.out.println("Dicionário popução NE do Brasil: " + populacao.toString());
+	
+	populacao.put("RN", 3534165);
+	
+	System.out.println("Alterado valor RN de  3.534.265 para 3.534.165: " + populacao.toString());
+	
+	}
+}

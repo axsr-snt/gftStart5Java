@@ -1,0 +1,42 @@
+package interfaceList;
+
+import java.util.List;
+import java.util.ArrayList;
+
+
+public class MetodosList {
+
+	public static void main(String[] args) {
+		
+		// jeitos de instânciar um objeto List
+		
+			//List notas = new ArrayList(); // antes do java 5
+				
+			//List<Double> notas = new ArrayList<>(); //Generics(jdk 5) - Diamond Operator (jdk 7)
+			
+			//ArrayList<Double> notas = new ArrayList<>();
+			
+			//List<Double> notas = new ArrayList<>(Arrays.asList(7d,8.5,9.3,5d,7d,0d,3.6));
+			
+			//List<Double> notas = Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
+	
+		
+		//
+		List<Double> notas = new ArrayList<>();
+			notas.add(9.6);
+			notas.add(2d);
+			notas.add(13.4);
+			notas.add(1.7);
+			notas.add(3.1);
+			notas.add(4d);
+			notas.add(10.9);
+			System.out.println(notas);
+		
+			notas.remove(4d);
+			System.out.println(notas);
+			
+		System.out.println("O index da nota 1.7 é: " + notas.indexOf(1.7));
+		
+	}
+	
+}

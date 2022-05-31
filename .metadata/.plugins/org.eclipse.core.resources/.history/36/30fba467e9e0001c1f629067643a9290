@@ -1,0 +1,64 @@
+package interfaceMap;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class ExercicioMap {
+
+	public static void main(String[] args) {
+		Map<String, Integer> populacao = new HashMap<>();
+		populacao.put("PE", 9616621);
+		populacao.put("AL", 3351543);
+		populacao.put("CE", 9187103);
+		populacao.put("RN", 3534265);
+	
+	System.out.println("\nDicionário popução NE do Brasil: " + populacao.toString());
+	
+	populacao.put("RN", 3534165);
+	System.out.println("\nAlterado valor RN de  3.534.265 para 3.534.165: " + populacao.toString());
+	
+	boolean status1 = populacao.containsKey("PB");
+	System.out.println("\nHá informação de PB? " + status1);
+	
+	populacao.put("PB", 4039277);
+	System.out.println("\nDicionario atualizado: " + populacao.toString());
+	
+	System.out.println("\nPopulação PB: " + populacao.get("PB"));
+	
+	Map<String, Integer> populacao1 = new LinkedHashMap<>();
+	populacao1.put("PE", 9616621);
+	populacao1.put("AL", 3351543);
+	populacao1.put("CE", 9187103);
+	populacao1.put("RN", 3534265);
+	populacao1.put("PB", 4039277);
+	
+	System.out.println("\nDicionario em ordem de inserção: " + populacao1.toString());
+	
+	Map<String, Integer> populacao2 = new TreeMap<>(populacao1);
+	System.out.println("\nDicionario em ordem alfabetica: " + populacao2.toString());
+	
+	Collection<Integer> populacao3 = populacao.values();
+	String maxPop = "";
+	String minPop = "";
+	for(Map.Entry<String, Integer> entry : populacao.entrySet()) {
+		if(entry.getValue().equals(Collections.max(populacao3))) 
+			maxPop = entry.getKey();
+		if(entry.getValue().equals(Collections.min(populacao3)))
+			minPop = entry.getKey();	
+	}
+	System.out.printf("\nEstado com a menor população: (%s) com (%d) pessoas", minPop, Collections.min(populacao3));
+	System.out.printf("\nEstado com a maior população: (%s) com (%d) pessoas", maxPop, Collections.max(populacao3));
+	
+	int s = 0;
+	Iterator<Integer> iterator = populacao.values().iterator();
+	while(iterator.hasNext()) {
+		s += 0;
+	}
+	System.out.println("\nA soma das populações dos estados de NE é: " + s);
+	}
+}

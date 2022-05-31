@@ -1,0 +1,60 @@
+package interfaceMap;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class MetodosMap {
+	
+	public static void main(String[] args) {
+		
+		//Map carrosPopulares2020 = new HashMap(); //antes do java 5
+		//Map<String, Double> carrosPopulares = new HashMap<>(); //Generics(jdk 5) - Diamont Operator(jdk 7)
+		//HashMap<String, Double> carrosPopulares = new HashMap<>();
+		//Map<String, Double> carrosPopulares2020 = Map.of("gol", 14.4, "uno", 15.6, "mobi", 16.1, "hb20", 14.5, "kwid", 15.6)
+	
+	Map<String, Double> carrosPop = new HashMap<>();
+		carrosPop.put("Gol", 14.4);
+		carrosPop.put("Uno", 15.6);
+		carrosPop.put("Mobi", 16.1);
+		carrosPop.put("HB20", 14.5);
+		carrosPop.put("Kwid", 15.6);
+	System.out.println("\nCarros populares: " + carrosPop.toString());
+	
+	//substituindo um valor de uma chave
+	carrosPop.put("Gol", 15.2);
+	System.out.println("\nLista com o Gol atualizado: " + carrosPop.toString());
+	
+	//consultar se a chave tucson está no dicionario
+	boolean status = carrosPop.containsKey("Tucson");
+	System.out.println("\nContém o carro Tucson no dicionario? " + status);
+	
+	//exibindo o valor de uma chave
+	double i = carrosPop.get("Uno");
+	System.out.println("\nO consumo do Uno é de: " + i);
+	
+	//exibir as chaves do dicionario
+	Set<String> chaves = carrosPop.keySet();
+	System.out.println("\nO conjunto de chaves do dicionario são: " + chaves);
+	
+	//exibir os valores do dicionario
+	Collection<Double> valores = carrosPop.values();
+	System.out.println("\nO conjunto de valores que o dicionário possui são: " + valores);
+	
+	//exibir a chave e o valor do modelo mais economico
+	double eco = Collections.max(carrosPop.values());
+	Set<Map.Entry<String, Double>> entries = carrosPop.entrySet();
+	String modEco = "";
+	for(Map.Entry<String, Double> entry : entries) {
+		if(entry.getValue().equals(eco)) {
+			modEco = entry.getKey();
+		}
+	}
+	System.out.println("\nO modelo mais economico é: " + modEco + " que faz " + eco + " por litro");
+	
+	
+	
+	}
+}

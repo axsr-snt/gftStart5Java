@@ -1,0 +1,10 @@
+package desafioBancoDigital;
+
+public class ContaCorrente extends Conta {
+
+	@Override
+	public void imprimirExtrato() {
+		super.imprimirExtrato();
+	}
+
+}

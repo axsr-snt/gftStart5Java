@@ -1,0 +1,21 @@
+package desafioBancoDigital;
+
+public class ContaPoupanca {
+
+	private int numeroAgencia;
+	private int numeroContaCorrente;
+	private double valorSaldo;
+	
+	public void sacar() {
+		
+	}
+	
+	public void depositar() {
+		
+	}
+	
+	public void transferir() {
+		
+	}
+	
+}
